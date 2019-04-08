@@ -7,7 +7,7 @@ from tkinter import messagebox
 import tkinter
 
 tkinter.Tk().withdraw()
-filename = askopenfilename() # show an "Open" dialog box and return the path to the selected file
+filename = askopenfilename()#select file
 
 raw_haar="facehaar.xml" #haar
 cascade=cv2.CascadeClassifier(raw_haar) #classifier
@@ -29,5 +29,3 @@ if not "faces_extract" in os.listdir("."): #check if dir present
 
 croper(filename)#run croper on src image input 
 messagebox.showinfo("Done","All extracted faces have been placed in faces_extract folders")
-#work.jpg has 22 ppl
-#cast.jpg has 5 ppl
